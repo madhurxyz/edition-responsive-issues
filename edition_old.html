@@ -45,7 +45,7 @@
     <style type="text/css">
         body {
           margin: 0;
-          font-family: Arial, sans-serif;
+          font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
           color: #000000;
           font-size: 16px;
           background-color: #DEEDE3;
@@ -64,13 +64,12 @@
         }
 
         h2 {
-          font-family: Georgia, serif;
-          color: #4A4A4A;
-          font-style: italic;
+          font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
         }
 
         p {
           line-height: 1.5em;
+          font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
           margin: 0;
         }
 
@@ -87,7 +86,7 @@
           width: 600px;
         }
         .email-sansSerif {
-          font-family: Georgia, serif;
+          font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Ubuntu', 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         .email-italic {font-style: italic;}
         .email-bold {font-weight: bold;}
@@ -161,6 +160,35 @@
           border-top: #000000;
           border-bottom: 1px solid rgba(151, 151, 151, 0.5);
         }
+        .main-title {
+          font-size: 19px;
+          text-align: center;
+          border: 0;
+          border-top: 1px solid rgba(155, 155, 155, 1);
+          border-bottom: 1px solid rgba(155, 155, 155, 1);
+          padding-top: 10px;
+          padding-bottom: 10px;
+          margin-bottom: 15px;
+        }
+        .block-title {
+          font-size: 19px;
+          border: 0;
+          padding-bottom: 5px;
+          border-bottom: 1px solid rgba(155, 155, 155, 1);
+        }
+        .email-highlight {
+          font-size: 36;
+          line-height: 1.25em;
+          padding-top: 15px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid rgba(155, 155, 155, 1);
+        }
+        .email-inline {
+          display: inline;
+        }
+        .email-inlineBlock {
+          display: inline-block;
+        }
         .email-block {
           display: block;
         }
@@ -204,6 +232,15 @@
         }
         .email-marginBottom30 {
           margin-bottom: 30px;
+        }
+        .email-paddingTop3 {
+            padding-top: 3px;
+        }
+        .email-paddingTop5 {
+            padding-top: 5px;
+        }
+        .email-paddingTop10 {
+            padding-top: 10px;
         }
         .email-paddingTop20 {
             padding-top: 20px;
@@ -265,15 +302,32 @@
             width: 100px;
         }
 
+        .email-width25pct {
+            width: 25%;
+        }
+        .email-width50pct {
+            width: 50%;
+        }
+
         .email-fullWidth {
             width: 100%;
+        }
+        .email-grey {
+            color: #9B9B9B;
+        }
+        .email-colorBlack {
+            color: #000000;
         }
 
         .email-fontSize10 {font-size: 10px;}
         .email-fontSize12 {font-size: 12px;}
         .email-fontSize14 {font-size: 14px;}
+        .email-fontSize15 {font-size: 15px;}
         .email-fontSize18 {font-size: 18px;}
         .email-fontSize19 {font-size: 19px;}
+        .email-fontSize24 {font-size: 24px;}
+        .email-fontSize30 {font-size: 30px;}
+        .email-fontSize36 {font-size: 36px;}
         .email-lineHeight185 {line-height: 1.85;}
         .email-borderLeft4Green {
             border-left: 4px solid #02B875;
@@ -306,9 +360,9 @@
             .email-xs-padding5 {
                 padding: 5px !important;
             }
-            .email-xs-horizontalPadding10 {
-              padding-left: 10px !important;
-              padding-right: 10px !important;
+            .email-xs-horizontalPadding30 {
+              padding-left: 30px !important;
+              padding-right: 30px !important;
             }
         }
     </style>
@@ -319,21 +373,21 @@
             <td>
                 <table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" class="container" width="600" style="margin-top: 10px">
                     <tbody><tr>
-                        <td style="padding-left: 15px; padding-right: 15px;">
-                            <table style="margin-top: 15px;" class="container" width="570">
+                        <td style="padding-left: 0px; padding-right: 0px;">
+                            <table style="margin: 15px auto 0 auto;" class="container" width="570">
                               <tbody><tr>
-                                <td width="600" style="background: #F8F8F8;  padding: 24px 30px">
+                                <td width="600" style="padding: 24px 30px 0px 30px; text-align: center">
+                                  <h2 style="text-align: center; padding-bottom: 15px; margin-top: 5px; color: #4A4A4A;">Stories to keep you informed, sane, and entertained</h2>
                                   <a href="https://medium.com">
-                                    <img width="100" style="width: 100px;" src="https://cdn-images-1.medium.com/1*zEVF7haWROF6AgkvXcN14A.png" alt="The Edition">
+                                    <img width="100" style="width: 90%;" src="https://cdn-images-1.medium.com/max/1600/1*GS_dOzn4GWMNQzyo_--kXQ.png" alt="The Edition">
                                   </a>
-                                  <h2 style="margin-top: 5px; color: #4A4A4A;">The weekly newsletter for Medium members</h2>
                                 </td>
                               </tr>
                             </tbody></table>
                         </td>
                     </tr>
                     <tr>
-                        <td bgcolor="#ffffff" width="600" style="background-color: #ffffff; padding-left: 20px; padding-right: 20px;" class="email-xs-horizontalPadding10">
+                        <td bgcolor="#ffffff" width="600" style="background-color: #ffffff; padding-left: 20px; padding-right: 20px;" class="email-xs-horizontalPadding30">
                             <br>
 
                             {{ content }}
@@ -341,7 +395,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div style="padding-right: 0; padding-bottom: 50px; padding-left: 0; margin-top: 50px; color: #b3b3b1; font-size: 12px; text-align: center;">
+                            <div class="email-sansSerif" style="padding-right: 0; padding-bottom: 50px; padding-left: 0; margin-top: 50px; color: #b3b3b1; font-size: 12px; text-align: center;">
                                 Sent by <a href="https://medium.com?source=email-{{user_id}}--intercom.marketing">Medium</a>
                                 ·
                                 799 Market Street, 5th floor, San Francisco, CA 94103
@@ -361,5 +415,25 @@
     </tbody></table>
 <br>
 <img src="https://medium.com/_/stat?event=email.opened&amp;source=email-{{user_id}}--member.edition" width="1" height="1">
+
+<a href="{{ unsubscribe_url }}"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body></html>
